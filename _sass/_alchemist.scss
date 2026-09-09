@@ -264,3 +264,21 @@ footer .container {
     transition: none !important;
   }
 }
+
+.language-switch {
+  margin-inline: auto 1rem;
+  padding: 0.2rem 0.6rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 4px;
+  font-size: 0.875rem;
+  white-space: nowrap;
+}
+#navbar .navbar-brand {
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+}
+@media (min-width: 576px) {
+  #navbar .navbar-collapse {
+    flex-grow: 0;
+  }
+}

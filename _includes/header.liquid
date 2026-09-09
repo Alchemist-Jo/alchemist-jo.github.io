@@ -1,0 +1,81 @@
+{% assign t = site.data.i18n[site.lang] %}
+{% assign root = site.language_root %}
+{% if root == null %}{% assign root = site.baseurl %}{% endif %}
+{% assign counterpart = root | append: '/en' | append: page.url %}
+{% if site.lang == 'en' %}{% assign counterpart = root | append: page.url %}{% endif %}
+<header>
+  <nav
+    id="navbar"
+    class="navbar navbar-light navbar-expand-sm {% if site.navbar_fixed %}fixed-top{% else %}sticky-top{% endif %}"
+    aria-label="{{ t.menu }}"
+  >
+    <div class="container">
+      <a class="navbar-brand title" href="{{ '/' | relative_url }}">Alchemist</a>
+      <a
+        class="language-switch"
+        href="{{ counterpart }}"
+        lang="{% if site.lang == 'en' %}zh-CN{% else %}en{% endif %}"
+        hreflang="{% if site.lang == 'en' %}zh-CN{% else %}en{% endif %}"
+        aria-label="{% if site.lang == 'en' %}切换到中文{% else %}Switch to English{% endif %}"
+      >
+        {%- if site.lang == 'en' %}中文{% else %}EN{% endif -%}
+      </a>
+      <button
+        class="navbar-toggler collapsed navbar-toggler-main"
+        type="button"
+        data-nav-toggle="navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="{{ t.menu }}"
+      >
+        <span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span><span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav">
+        <ul class="navbar-nav navbar-menu-list flex-nowrap">
+          <li class="nav-item {% if page.url == '/' %}active{% endif %}">
+            <a
+              class="nav-link"
+              href="{{ '/' | relative_url }}"
+              {% if page.url == '/' %}
+                aria-current="page"
+              {% endif %}
+            >
+              {{- t.home -}}
+            </a>
+          </li>
+          <li class="nav-item {% if page.url contains '/blog/' %}active{% endif %}">
+            <a
+              class="nav-link"
+              href="{{ '/blog/' | relative_url }}"
+              {% if page.url == '/blog/' %}
+                aria-current="page"
+              {% endif %}
+            >
+              {{- t.blog -}}
+            </a>
+          </li>
+          {% if site.search_enabled %}
+            <li class="nav-item">
+              <button id="search-toggle" type="button" title="{{ t.search }}" aria-label="{{ t.search }}">
+                <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span>
+              </button>
+            </li>
+          {% endif %}
+          {% if site.enable_darkmode %}
+            <li class="toggle-container">
+              <button id="light-toggle" type="button" title="{{ t.theme }}" aria-label="{{ t.theme }}">
+                <i class="fa-half-sun-moon" id="light-toggle-system"></i><i class="fa-solid fa-moon" id="light-toggle-dark"></i
+                ><i class="fa-solid fa-sun" id="light-toggle-light"></i>
+              </button>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </nav>
+  {% if site.enable_progressbar -%}
+    <progress id="progress" value="0">
+      <div class="progress-container"><span class="progress-bar"></span></div>
+    </progress>
+  {%- endif %}
+</header>
