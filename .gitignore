@@ -1,0 +1,15 @@
+_site/
+.bundle/
+.DS_Store
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+node_modules/
+vendor/
+.env
+.env.*
+!.env.example
+assets/libs/
+al-folio-upgrade-report.md
+__pycache__/
+_config.deploy.yml
