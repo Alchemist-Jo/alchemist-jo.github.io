@@ -5,7 +5,7 @@ description: "草稿模板，不会在正式构建中发布。"
 tags: research
 categories: notes
 authors:
-  - name: Klein
+  - name: Alchemist
 toc:
   - name: Problem
   - name: Method

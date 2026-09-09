@@ -1,8 +1,10 @@
 # Alchemist
 
-This is Klein's personal blog, based on the al-folio v1 starter. This directory is an independent Git repository.
+This is Alchemist's personal blog, based on the al-folio v1 starter. This directory is an independent Git repository.
 
-- Site name: Alchemist. Author: Klein. Do not invent affiliations, publications, links, or research findings.
+- Public site and author identity: Alchemist only. Never publish a private name or infer personal affiliations. Use the repository-local pseudonymous commit identity.
+- Keep README.md byte-for-byte identical to the documented upstream README snapshot.
+- Site name: Alchemist. Author: Alchemist. Do not invent affiliations, publications, links, or research findings.
 - Edit content and config before considering theme overrides. Runtime belongs to pinned upstream gems.
 - New research articles begin in `_drafts/`. Publish only when the user requests it by moving to `_posts/YYYY-MM-DD-slug.md`.
 - Preserve upstream LICENSE and UPSTREAM.md; never push to the upstream template repository.

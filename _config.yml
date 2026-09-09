@@ -3,15 +3,15 @@
 # -----------------------------------------------------------------------------
 
 title: Alchemist
-first_name: Klein
+first_name: Alchemist
 middle_name: ""
 last_name: ""
 contact_note: ""
-description: Alchemist — Klein 的个人博客：研究笔记、阅读与思考。
+description: Alchemist — 关于研究、阅读与思考的个人笔记。
 footer_text: 'Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/alshedivat/al-folio">al-folio</a>. Hosted on GitHub Pages.'
 keywords: personal blog, research notes
 lang: zh-CN
-icon: ✍️
+icon: A
 apple_touch_icon: # image name in /assets/img/ (or a rooted path / absolute URL) used for iOS home-screen bookmarks; needs a real 180x180 PNG, since Safari ignores the emoji favicon above. Left empty, iOS falls back to a screenshot of the page.
 
 url: https://alchemist-jo.github.io
@@ -98,7 +98,7 @@ posts_in_search: true
 bib_search: true
 
 # Dimensions
-max_width: 930px
+max_width: 1040px
 
 # -----------------------------------------------------------------------------
 # Open Graph & Schema.org
@@ -345,7 +345,7 @@ display_categories: []
 
 scholar:
   last_name: []
-  first_name: [Klein]
+  first_name: [Alchemist]
 
   style: apa
   locale: en
