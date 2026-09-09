@@ -2,24 +2,29 @@
 layout: default
 title: 首页
 permalink: /
+translations:
+  en:
+    title: Home
 ---
+
+{% assign t = site.data.i18n[site.lang] %}
 
 <section class="notebook-intro" aria-labelledby="notebook-title">
   <div>
     <p class="eyebrow">A PERSONAL NOTEBOOK</p>
     <h1 id="notebook-title">Alchemist<span class="title-dot">.</span></h1>
-    <p class="intro-subtitle">研究，阅读，与思考。</p>
+    <p class="intro-subtitle">{{ t.subtitle }}</p>
   </div>
   <div class="intro-note">
-    <p>把问题写清楚，<br>让想法慢慢成形。</p>
-    <a class="quiet-link" href="{{ '/feed.xml' | relative_url }}">订阅 RSS <span aria-hidden="true">↗</span></a>
+    <p>{{ t.motto }}</p>
+    <a class="quiet-link" href="{{ '/feed.xml' | relative_url }}">{{ t.rss }} <span aria-hidden="true">↗</span></a>
   </div>
 </section>
 
 <section class="notebook-entries" aria-labelledby="entries-title">
   <div class="section-label">
-    <h2 id="entries-title">最近的笔记</h2>
-    <a class="quiet-link" href="{{ '/blog/' | relative_url }}">全部文章 <span aria-hidden="true">↗</span></a>
+    <h2 id="entries-title">{{ t.recent }}</h2>
+    <a class="quiet-link" href="{{ '/blog/' | relative_url }}">{{ t.all }} <span aria-hidden="true">↗</span></a>
   </div>
   <ol class="entry-list">
     {% for post in site.posts limit:5 %}

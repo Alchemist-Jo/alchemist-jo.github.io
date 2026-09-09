@@ -14,12 +14,17 @@ pagination:
   trail:
     before: 1
     after: 3
+translations:
+  en:
+    title: Blog
 ---
+
+{% assign t = site.data.i18n[site.lang] %}
 
 <header class="archive-intro">
   <p class="eyebrow">THE ARCHIVE</p>
-  <h1>笔记</h1>
-  <p>记录问题，也记录理解的变化。</p>
+  <h1>{{ t.notes }}</h1>
+  <p>{{ t.archive_description }}</p>
 </header>
 <ol class="entry-list">
   {% for post in paginator.posts %}
