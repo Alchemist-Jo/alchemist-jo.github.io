@@ -1,6 +1,6 @@
 # Setup status — 2026-09-09
 
-Site: **Alchemist**. Author: **Klein**.
+Site: **Alchemist**. Author: **Alchemist**.
 
 ## Completed locally
 
