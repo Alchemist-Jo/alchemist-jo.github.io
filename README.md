@@ -1,5 +1,7 @@
 # Alchemist
 
+[访问博客](https://alchemist-jo.github.io/) · [发布状态](https://github.com/Alchemist-Jo/alchemist-jo.github.io/actions/workflows/pages.yml)
+
 Klein 的个人博客，复用 [al-folio](https://github.com/alshedivat/al-folio) v1 和 Jekyll。文章使用 Markdown，支持公式、代码高亮、目录、引用、深浅色模式、RSS 和归档。
 
 ## 日常写作
@@ -31,9 +33,9 @@ python3 bin/check-site.py _site
 
 ## GitHub Pages
 
-优先使用 `<账号>.github.io` 仓库。在 Settings → Pages 选择 **GitHub Actions**，然后推送 `main`。工作流自动从仓库名推导域名和子路径，不需要长期访问 token，只有部署任务获得 Pages 写入权限。
+仓库为 `Alchemist-Jo/alchemist-jo.github.io`，Pages 发布来源已设为 **GitHub Actions**。推送 `main` 后会自动检查和发布。工作流自动从仓库名推导域名和子路径，不需要长期访问 token，只有部署任务获得 Pages 写入权限。
 
-`_config.yml` 中的 localhost 是本地默认值；CI 生成 `_config.deploy.yml` 覆盖。正式仓库确定后，也应把 `_config.yml` 的 `url` 和 `baseurl` 更新为正式值。自定义域名可通过仓库 Actions 变量 `SITE_URL` 配置；根路径将 `SITE_BASEURL` 设为 `/`，并在 Pages 设置和 DNS 配置该域名。
+`_config.yml` 已设置正式地址 `https://alchemist-jo.github.io` 和空 `baseurl`；CI 生成 `_config.deploy.yml`，兼容个人站点和项目子路径。自定义域名可通过仓库 Actions 变量 `SITE_URL` 配置；根路径将 `SITE_BASEURL` 设为 `/`，并在 Pages 设置和 DNS 配置该域名。
 
 ## 维护
 
@@ -44,4 +46,4 @@ python3 bin/check-site.py _site
 - 回滚用 GitHub Revert 或 `git revert`，让工作流重新部署；不要覆盖历史。
 - 不复制主题内部实现；升级时优先更新 gem 版本。来源和许可证见 [UPSTREAM.md](UPSTREAM.md)。
 
-初次发布前请审阅首页和开篇文字，并提供 GitHub 账号。远程仓库和线上部署状态以实际 GitHub 验证为准。
+初次部署已于 2026-09-09 验证成功。后续修改可在本地提交后执行 `git push origin main`；代码和依赖变更通过 PR 审阅后合并。现有 SSH key 可用于推送，无需创建新的 token。
