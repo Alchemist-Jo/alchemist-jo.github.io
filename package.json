@@ -6,7 +6,7 @@
     "format": "prettier . --write"
   },
   "devDependencies": {
-    "@shopify/prettier-plugin-liquid": "1.10.0",
+    "@shopify/prettier-plugin-liquid": "1.11.1",
     "prettier": "3.8.0"
   }
 }
